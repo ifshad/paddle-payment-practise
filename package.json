@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@paddle/paddle-js": "^0.5.4"
+  }
+}
