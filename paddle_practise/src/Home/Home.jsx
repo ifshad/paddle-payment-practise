@@ -3,13 +3,15 @@ import { initializePaddle } from '@paddle/paddle-js';
 
 const Home = () => {
     const [paddle, setPaddle] = useState(null);
-    // console.log(paddle);
+    // const clientSideToken = import.meta.env.REACT_APP_CLIENT_SIDE_TOKEN;
+    // const priceIdToken = import.meta.env.REACT_APP_PRICE_ID;
+    // console.log(import.meta.env.REACT_APP_CLIENT_SIDE_TOKEN);
 
     // inialize paddle
     useEffect(() => {
         initializePaddle({
             environment: 'sandbox',
-            token: 'test_3b5cdb31e5f685c558efdb2ba8a'
+            token: `${import.meta.env.REACT_APP_CLIENT_SIDE_TOKEN}`,
         })
             .then((paddleInstance) => {
                 if (paddleInstance) {
@@ -23,9 +25,11 @@ const Home = () => {
     const handlePurchase = () => {
         paddle.Checkout.open({
             items: [{
-                priceId: 'pri_01hkqprs3ay7avm80x53w1hpf0', quantity: 1,}]
+                priceId: `${import.meta.env.REACT_APP_PRICE_ID}`, 
+                quantity: 1,
+            }]
         });
-        console.log(items);
+        // console.log(items);
     }
     return (
         <div className="m-4 p-4">

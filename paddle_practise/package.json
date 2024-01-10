@@ -12,7 +12,8 @@
   "dependencies": {
     "@paddle/paddle-js": "^0.5.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vite-plugin-env-compatible": "^2.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
