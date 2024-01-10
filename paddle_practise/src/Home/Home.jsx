@@ -25,7 +25,7 @@ const Home = () => {
             items: [{
                 priceId: 'pri_01hkqprs3ay7avm80x53w1hpf0', quantity: 1,}]
         });
-        // console.log(paddle.Checkout.open);
+        console.log(items);
     }
     return (
         <div className="m-4 p-4">
